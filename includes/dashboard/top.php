@@ -74,6 +74,29 @@ $usuario = $usuariologado ?
             <p>Cargos</p>
           </a>
         </li>
+        <li class="<?php
+
+                    switch ($acesso) {
+                      case '2':
+                        echo "nav-item d-none d-sm-inline-block";
+                        break;
+                      case '3':
+                        echo "";
+                        break;
+                      case '4':
+                        echo "";
+                        break;
+
+                      default:
+                        echo "nav-item d-none d-sm-inline-block";
+                        break;
+                    }
+
+                    ?>" style="display: none;">
+          <a href="pages/usuarios/usuario-list.php" class="nav-link">
+            <p>Usuários</p>
+          </a>
+        </li>
       </ul>
 
       <!-- SEARCH FORM -->
